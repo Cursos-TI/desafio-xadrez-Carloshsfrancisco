@@ -5,21 +5,49 @@
 // O objetivo é utilizar estruturas de repetição e funções para determinar os limites de movimentação dentro do jogo.
 
 int main() {
-    // Nível Novato - Movimentação das Peças
-    // Sugestão: Declare variáveis constantes para representar o número de casas que cada peça pode se mover.
+    //Variáveis para controlar as repetições
+    int torre; //usado no laço for
+    int bispo = 0; //usado no laço while
+    int rainha = 0; //usado no laço do-while
+    int movimentoCavalo = 1; //usando loop infinito
 
-    // Implementação de Movimentação do Bispo
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação do Bispo em diagonal.
+    //Movimento da Torre (for)
+    //Mover a Torre 5 casas para a direita
+    printf("Movimento da torre:\n");
+    for (torre = 0; torre < 5; torre++)
+    {
+        printf("Direita\n");
+    }
 
-    // Implementação de Movimentação da Torre
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Torre para a direita.
+    //Movimento do Bispo (While)
+    //Bispo anda 5 casas na diagonal (cima + direita)
+    printf("\nMovimento do Bispo:\n");
+    while (bispo < 5)
+    {
+        printf("Cima Direita\n");
+        bispo++;
+    }
 
-    // Implementação de Movimentação da Rainha
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Rainha para a esquerda.
+    //Movimento da rainha (do-While)
+    //Bispo anda 8 casas para a esquerda
+    printf("\nMovimento da Rainha:\n");
+    do{
+        printf("Esqueda\n");
+        rainha++;
+    } while (rainha < 8);
 
     // Nível Aventureiro - Movimentação do Cavalo
-    // Sugestão: Utilize loops aninhados para simular a movimentação do Cavalo em L.
-    // Um loop pode representar a movimentação horizontal e outro vertical.
+    //Movimento do cavalo (loop for e while)
+    //Cavalo anda duas casas para baixo e uma para a esquerda
+    printf("\nMovimento do cavalo:\n");
+    while(movimentoCavalo--)
+    {
+        for (int cavalo = 0; cavalo < 2; cavalo++)
+        {
+            printf("Baixo\n");
+        }
+        printf("Esquerda\n");
+    }
 
     // Nível Mestre - Funções Recursivas e Loops Aninhados
     // Sugestão: Substitua as movimentações das peças por funções recursivas.
